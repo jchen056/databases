@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 
 st.markdown("# Unifrom distribution")
 st.sidebar.markdown("# Unifrom distribution")
-st.latex(r'''pdf: p(x)=\frac{1}{b-a}''')
+st.write('X~Uniform(a,b)')
+st.latex(r'''pdf: p(x)=\frac{1}{b-a} on [a,b]''')
 
 num1=st.number_input("Insert a number for lower bound")
 num2=st.number_input("nsert a number for upper bound")
@@ -26,3 +27,7 @@ arr=np.random.uniform(num1,num2,10000)
 fig,ax=plt.subplots()
 ax.hist(arr,bins=20,density=True)
 st.pyplot(fig)
+
+st.subheader("Food for thought")
+st.markdown('''1. Derive the formulas for the expected value and variance for Unifrom random variables.
+2. Let X ~ Uniform(0,1) and Y ~ Uniform(0,1). Find the density of X+Y.''')
